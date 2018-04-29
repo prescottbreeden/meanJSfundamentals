@@ -184,6 +184,39 @@ console.log("arrow function example")
 var funny = sayName4("Dolores");
 console.log(funny + " ... wonder why I can't capture the ouput of this function")
 
+// JSONs
 
+let sandwiches = [
+    {
+        id: 1,
+        'bread_type': "Sourdough",
+        ingredients: 'Spicy Turkey, Spicy Mustard'
+    },
+    {
+        id: 2,
+        'bread_type': "Marbled Rye",
+        'ingredients': 'Prosciutto, Swiss Cheese'
+    },
+    {
+        id: 3,
+        'bread_type': 'Wheat',
+        'ingredients': 'Ham, Provolone Cheese, Tomato'
+    }
+];
+console.log("..........................")
+console.log("selecting an object by key")
+let menuItem = 3;
+sandwiches.forEach(sandwich => {
+    for (const ingredient in sandwich) {
+        if(sandwich.id == menuItem){
+            if (sandwich.hasOwnProperty(ingredient)) {
+                const element = sandwich[ingredient];
+                if(typeof element === "number"){ continue }
+                console.log(element);
+            }
+        }
+    }
+})
+    
 
 
