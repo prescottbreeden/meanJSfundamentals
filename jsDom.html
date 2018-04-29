@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <h1>Students</h1>
+        <ul id="main">
+            <!-- this is empty -->
+        </ul>
+    <script>
+        function appendList(arr, id) {
+            arr.forEach(student_name => {
+                let new_student = document.createElement("li");
+                new_student.innerHTML = student_name;
+                document.getElementById(id).appendChild(new_student);
+            });
+        };
+        let students = ["Jeff", "Jenny", "Javier", "Joslyn", "Joe", "Jane", "Django"];
+        let target_id = "main";
+        appendList(students, target_id);
+
+        function superAppend(arr, element, id) {
+            
+        }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!--  
+
+    :...............................:
+    :                               :
+    :       DOM Manipulation        :
+    :                               :
+    :...............................:
+    
+-->
+
+<html>
+    <body>
+        <div id="message">
+            Hello World!
+        </div>
+        <div class="fruit">
+            <ol id="fruit">
+                <li>Bananas</li>
+                <li>Oranges</li>
+                <li>Apples</li>
+            </ol>
+        </div>
+    <script>
+        // basic manipulations
+        let x = document.getElementById("message").innerHTML;
+        console.log(x);
+        let y = document.getElementById("message").innerHTML = "I love JavaScript";
+        console.log(y);
+
+        // creating elements and appending children
+        // create an empty li:
+        let new_fruit = document.createElement("li");
+        // modify its contents with a string:
+        new_fruit.innerHTML = "Pears";
+        // append new element to the DOM via the id 'fruit'
+        document.getElementById("fruit").appendChild(new_fruit);
+    </script>
+    </body>
+</html>
