@@ -218,5 +218,18 @@ sandwiches.forEach(sandwich => {
     }
 })
     
+//---------------------------//
+//-------- Hoisting ---------//
+//---------------------------//
 
+console.log("..........................")
+console.log("hoisting demo example")
 
+var foo = "bar";
+function magic(){
+    foo = "hello world";
+    console.log(foo);
+    var foo;
+}
+magic();
+console.log(foo);
