@@ -4,6 +4,10 @@
         <ul id="main">
             <!-- this is empty -->
         </ul>
+        <h1>Super Append</h1>
+        <ul id="super_append">
+            <!-- this is empty -->
+        </ul>
     <script>
         function appendList(arr, id) {
             arr.forEach(student_name => {
@@ -12,13 +16,18 @@
                 document.getElementById(id).appendChild(new_student);
             });
         };
-        let students = ["Jeff", "Jenny", "Javier", "Joslyn", "Joe", "Jane", "Django"];
-        let target_id = "main";
-        appendList(students, target_id);
-
+ 
         function superAppend(arr, element, id) {
-            
-        }
+            arr.forEach(student_name => {
+                let new_student = document.createElement(element);
+                new_student.innerHTML = student_name;
+                document.getElementById(id).appendChild(new_student);
+            });
+        };
+ 
+        let students = ["Jeff", "Jenny", "Javier", "Joslyn", "Joe", "Jane", "Django"];
+        appendList(students, "main");
+        superAppend(students, "h4", "super_append")
     </script>
     </body>
 </html>
